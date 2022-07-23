@@ -1,7 +1,7 @@
 header {
   width: 100%;
-  height: 100vh;
   position: fixed;
+  background-color: var(--Background);
 }
 header span {
   color: white;
@@ -165,7 +165,7 @@ header .flecha {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
+    background-color: transprarent;
     z-index: 0;
     transform: translateX(0);
     -webkit-transform: translateX(0);
@@ -199,12 +199,14 @@ header .flecha {
   .Container-Header-selected > ul > li > a:focus,
   .Container-Header-selected > ul > li > a:hover {
     color: #fff;
+    
   }
 
   .Container-Header-selected > ul > li > a:focus:after,
   .Container-Header-selected > ul > li > a:hover:after {
     width: 100%;
     left: 0%;
+    background-color: #fff;
   }
 
   .Container-Header-selected > ul > li > a:after {

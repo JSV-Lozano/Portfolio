@@ -22,17 +22,17 @@ function Skill() {
   ];
   return (
     <div id="Skills" className="Skills-Container">
-     <div className="Containers-Info">
-     <h2>Skills</h2>
-      <div className="Container-Skills">
-        {Skills.map((skill) => (
-          <div key={skill.name} className="Container-Skill">
-            <img src={skill.img} alt={skill.name} className="Skill-img" />
-            <h3>{skill.name}</h3>
-          </div>
-        ))}
+      <div className="Containers-Info">
+        <h2>Skills</h2>
+        <div className="Container-Skills">
+          {Skills.map((skill) => (
+            <div key={skill.name} className="Container-Skill">
+              <img src={skill.img} alt={skill.name} className="Skill-img" />
+              <h3>{skill.name}</h3>
+            </div>
+          ))}
+        </div>
       </div>
-     </div>
     </div>
   );
 }
