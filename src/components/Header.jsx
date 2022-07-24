@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../Styles/Header.css";
+import styles from "../Styles/Header2.css";
 
 function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -8,8 +8,8 @@ function Header() {
       <header>
         <div className="Container-Header">
           <div className="Container-Color-Header">
+            <span>StivenDev</span>
             <div className="Header-Container">
-              <span>StivenDev</span>
               <div className={`Container-Header-selected ${isOpen && "open"}`}>
                 <ul>
                   <li>
@@ -26,9 +26,9 @@ function Header() {
                   </li>
                 </ul>
               </div>
-              <div className={`Nav-Toggle ${isOpen && "open"}`}>
-                <div onClick={() => setIsOpen(!isOpen)} className="Bar"></div>
-              </div>
+            </div>
+            <div className={`Nav-Toggle ${isOpen && "open"}`}>
+              <div onClick={() => setIsOpen(!isOpen)} className="Bar"></div>
             </div>
           </div>
         </div>

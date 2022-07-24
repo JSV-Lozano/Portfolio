@@ -8,7 +8,6 @@
   padding-top: 100px;
 }
 .Container-Info {
-  margin-top: 1000px;
   width: 90%;
   overflow: hidden;
   display: flex;
@@ -20,20 +19,91 @@
   box-sizing: border-box;
   color: var(--TextColor);
 }
-.Container-Info h2{
-    padding-bottom: 10px;
-    font-size: 2.5rem;
+.Container-Info h2 {
+  padding-bottom: 10px;
+  font-size: 2.5rem;
+  color: var(--Title);
 }
-.Container-Info h3{
-    padding-bottom: 10px;
-    font-size: 2rem
+.Container-Info h3 {
+  padding-bottom: 10px;
+  font-size: 2rem;
 }
-.Container-Info p{
-    padding-bottom: 50px;
-    font-size: 1.8rem;
-    color: var(--SecondColor);
+
+.Container-Info p {
+  padding-bottom: 50px;
+  font-size: 2.5rem;
+  color: var(--SecondColor);
+  font-family: var(--FontSecond);
+  font-weight: bold;
 }
+
 .About-me {
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 400px;
+}
+.Container-Text {
+  text-align: center;
+}
+.Container-Info-My {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.CV{
+  background-color: var(--Title);
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: var(--Title);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.CV a{
+  text-decoration: none;
+  color: var(--TitleColor);
+}
+
+@media (min-width: 700px) {
+  .Container-About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  .Container-Info-My {
+    background-color: red;
+    width: 400px;
+    height: 400px;
+  }
+  .Container-Text {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+  }
+  .Container-Text h2 {
+    font-size: 4rem;
+
+    margin: 5px;
+  }
+  .Container-Text h3 {
+    font-size: 3rem;
+    margin: 5px;
+  }
+
+  .Container-Info-My p {
+    margin-bottom: 50px;
+    width: 50%;
+  }
+  .Containers-Info {
+    height: 100vh;
+    object-fit: cover;
+  }
+  .Animation-img {
+    object-fit: cover;
+  }
 }

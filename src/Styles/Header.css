@@ -4,10 +4,10 @@ header {
   background-color: var(--Background);
 }
 header span {
-  color: white;
+  color: var(--Title);
   font-size: 2em;
   font-weight: bold;
-  font-family: "Inconsolata", monospace;
+  font-family: var(--FontSecond);
 }
 .Container-Header {
   width: 90%;
@@ -146,6 +146,7 @@ header .flecha {
   justify-content: space-between;
   align-items: center;
 }
+
 @media (min-width: 769px) {
   .Container-Header {
     width: 90%;
@@ -184,7 +185,7 @@ header .flecha {
     margin: 0;
   }
   .Container-Header-selected > ul > li > a {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #e1e1e1;
     cursor: pointer;
     position: relative;
@@ -199,14 +200,13 @@ header .flecha {
   .Container-Header-selected > ul > li > a:focus,
   .Container-Header-selected > ul > li > a:hover {
     color: #fff;
-    
   }
 
   .Container-Header-selected > ul > li > a:focus:after,
   .Container-Header-selected > ul > li > a:hover:after {
     width: 100%;
     left: 0%;
-    background-color: #fff;
+    background-color: var(--Title);
   }
 
   .Container-Header-selected > ul > li > a:after {
@@ -217,7 +217,7 @@ header .flecha {
     position: absolute;
     width: 0%;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--Title);
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
