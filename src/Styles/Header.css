@@ -1,225 +1,183 @@
-header {
+.header {
+  margin: 0 auto;
   width: 100%;
+}
+.Container-Header {
+  z-index: 1;
+  width: 100%;
+  height: 70px;
   position: fixed;
+  display: flex;
+  justify-content: center;
   background-color: var(--Background);
 }
-header span {
+.Container-Color-Header {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Container-Color-Header span {
   color: var(--Title);
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
   font-family: var(--FontSecond);
 }
-.Container-Header {
-  width: 90%;
-  height: 50px;
+.Container-Header-selected > ul {
+  width: 500px;
+  list-style: none;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  align-items: center;
 }
-header .flecha {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  font-size: 2em;
-}
-.Container-Header-selected {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  top: 49px;
-  width: 100%;
-  height: 100%;
-  background-color: var(--Background);
-  left: 0;
-  z-index: 1;
-  transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  transition: all 0.5s ease-in-out;
-}
-.Container-Color-Header {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--Background);
-}
-.Container-Header-selected.open {
-  transform: translateX(0);
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-}
-.Container-Header-selected.open > ul::before {
-  background: transparent;
-}
-.Container-Header-selected > ul > li {
-  text-align: center;
-  margin: 30px;
-}
-.Container-Header-selected ul {
-  list-style: none;
-}
+/* Animate hover a */
 .Container-Header-selected > ul > li > a {
   text-decoration: none;
   font-size: 2rem;
-  color: #fff;
-  font-family: "Inconsolata", monospace;
-  font-weight: bold;
-}
-/*Animation Bar  */
-.Nav-Toggle > .Bar {
+  color: #e1e1e1;
+  cursor: pointer;
   position: relative;
-  width: 32px;
-  height: 2px;
-  background-color: #fff;
-  transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-}
-.Nav-Toggle > .Bar::before,
-.Nav-Toggle > .Bar::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  background-color: #fff;
-  transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-}
-.Nav-Toggle > .Bar::before {
-  width: 25px;
-  right: 0;
-  transform: translateY(-8px);
-  -webkit-transform: translateY(-8px);
-  -moz-transform: translateY(-8px);
-  -ms-transform: translateY(-8px);
-  -o-transform: translateY(-8px);
-}
-.Nav-Toggle > .Bar::after {
-  width: 32px;
-  transform: translateY(8px);
-  -webkit-transform: translateY(8px);
-  -moz-transform: translateY(8px);
-  -ms-transform: translateY(8px);
-  -o-transform: translateY(8px);
-}
-.Nav-Toggle.open > .Bar {
-  transform: translateX(-40px);
-  -webkit-transform: translateX(-40px);
-  -moz-transform: translateX(-40px);
-  -ms-transform: translateX(-40px);
-  -o-transform: translateX(-40px);
-  background-color: transparent;
-}
-.Nav-Toggle.open > .Bar::before {
-  width: 32px;
-  transform: rotate(45deg) translate(26px, -26px);
-  -webkit-transform: rotate(45deg) translate(26px, -26px);
-  -moz-transform: rotate(45deg) translate(26px, -26px);
-  -ms-transform: rotate(45deg) translate(26px, -26px);
-  -o-transform: rotate(45deg) translate(26px, -26px);
-}
-.Nav-Toggle.open > .Bar::after {
-  transform: rotate(-45deg) translate(26px, 26px);
-  -webkit-transform: rotate(-45deg) translate(26px, 26px);
-  -moz-transform: rotate(-45deg) translate(26px, 26px);
-  -ms-transform: rotate(-45deg) translate(26px, 26px);
-  -o-transform: rotate(-45deg) translate(26px, 26px);
-}
-.Header-Container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
-@media (min-width: 769px) {
-  .Container-Header {
-    width: 90%;
-    height: 80px;
-  }
-  header {
-    overflow: hidden;
-  }
-  header span {
-    font-size: 2.5rem;
-  }
-  .Nav-Toggle {
-    display: none;
-  }
+.Container-Header-selected > ul > li > a:focus,
+.Container-Header-selected > ul > li > a:hover {
+  color: #fff;
+}
+
+.Container-Header-selected > ul > li > a:focus:after,
+.Container-Header-selected > ul > li > a:hover:after {
+  width: 100%;
+  left: 0%;
+  background-color: var(--Title);
+}
+
+.Container-Header-selected > ul > li > a:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--Title);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+.Nav-Toggle {
+  display: none;
+}
+@media (max-width: 768px) {
   .Container-Header-selected {
-    position: static;
+    position: fixed;
+    top: 69px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: transprarent;
-    z-index: 0;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
+    height: 100vh;
+    background-color: var(--Background);
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
   }
-  .Container-Header ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .Container-Header-selected.open {
+    transform: translateX(0);
+    -webkit-transform: translateX;
+    -moz-transform: translateX;
+    -ms-transform: translateX;
+    -o-transform: translateX;
+  }
+  .Container-Header-selected > ul {
     align-items: center;
-    width: 90px;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+  .Container-Header-selected > ul > li {
+    margin: 10px;
   }
   .Container-Header-selected > ul > li > a {
-    font-size: 2rem;
-    color: #e1e1e1;
-    cursor: pointer;
+    font-size: 3rem;
+  }
+  /*Animation Bar  */
+  .Nav-Toggle {
+    display: block;
+  }
+  .Nav-Toggle > .Bar {
     position: relative;
-    border: none;
-    background: none;
-    text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-  }
-
-  .Container-Header-selected > ul > li > a:focus,
-  .Container-Header-selected > ul > li > a:hover {
-    color: #fff;
-  }
-
-  .Container-Header-selected > ul > li > a:focus:after,
-  .Container-Header-selected > ul > li > a:hover:after {
-    width: 100%;
-    left: 0%;
-    background-color: var(--Title);
-  }
-
-  .Container-Header-selected > ul > li > a:after {
-    content: "";
-    pointer-events: none;
-    bottom: -2px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
+    width: 32px;
     height: 2px;
-    background-color: var(--Title);
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
+    background-color: #fff;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+  }
+  .Nav-Toggle > .Bar::before,
+  .Nav-Toggle > .Bar::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+  }
+  .Nav-Toggle > .Bar::before {
+    width: 25px;
+    right: 0;
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+  }
+  .Nav-Toggle > .Bar::after {
+    width: 32px;
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
+    -moz-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    -o-transform: translateY(8px);
+  }
+  .Nav-Toggle.open > .Bar {
+    transform: translateX(-40px);
+    -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -o-transform: translateX(-40px);
+    background-color: transparent;
+  }
+  .Nav-Toggle.open > .Bar::before {
+    width: 32px;
+    transform: rotate(45deg) translate(26px, -26px);
+    -webkit-transform: rotate(45deg) translate(26px, -26px);
+    -moz-transform: rotate(45deg) translate(26px, -26px);
+    -ms-transform: rotate(45deg) translate(26px, -26px);
+    -o-transform: rotate(45deg) translate(26px, -26px);
+  }
+  .Nav-Toggle.open > .Bar::after {
+    transform: rotate(-45deg) translate(26px, 26px);
+    -webkit-transform: rotate(-45deg) translate(26px, 26px);
+    -moz-transform: rotate(-45deg) translate(26px, 26px);
+    -ms-transform: rotate(-45deg) translate(26px, 26px);
+    -o-transform: rotate(-45deg) translate(26px, 26px);
+  }
+  .Header-Container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
