@@ -25,9 +25,11 @@ function AboutMe() {
         >
           <h2>Jhoan Stiven</h2>
           <h3>Desarrollador Web</h3>
-          <button className="CV">
-            <a href={PDF} target="_blank">CV</a>
-          </button>
+          <div className="CV">
+            <a href={PDF} target="_blank">
+              CV
+            </a>
+          </div>
         </div>
       </div>
     </div>

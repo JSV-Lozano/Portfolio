@@ -23,6 +23,14 @@ function Skill() {
       name: "Git",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     },
+    {
+      name: "Redux",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    },
+    {
+      name: "Rest-Api",
+      img: "https://miro.medium.com/max/475/1*yludgK8sb_ZzGAffyKk3AQ.png",
+    },
   ];
   return (
     <div id="Skills" className="Skills-Container">
